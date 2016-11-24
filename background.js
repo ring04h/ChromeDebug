@@ -39,10 +39,10 @@ function stopCapturing(target) {
 }
 
 function onDebuggerEvent(debugee, message, params) {
-    if (message == "Network.requestWillBeSent" && params.type == "XHR") {
+    if (message == "Network.requestWillBeSent") {
         requestSent[params.requestId] = params.request;
 
-    } else if (message == "Network.responseReceived" && params.type == "XHR") {
+    } else if (message == "Network.responseReceived") {
 
         chrome.debugger.sendCommand(debugee, "Network.getResponseBody", params, function(responseBody) {
             params.response.base64Encoded = responseBody.base64Encoded;
