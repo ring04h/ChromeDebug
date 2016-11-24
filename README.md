@@ -1,8 +1,10 @@
 # ChromeDebug
 Chrome DevTools Network debuger Examples
 
-###
-导出插件   
+### 参考
+https://developer.chrome.com/extensions/debugger   
+
+### 导出插件   
 ```
 git clone https://github.com/ring04h/ChromeDebug   
 ```
